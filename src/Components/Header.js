@@ -1,6 +1,9 @@
+import React from 'react';
 import { Row, Col } from "react-bootstrap";
 
-const Header = ({title}) => { // destructuring de props.title
+// HOC (High order component)
+const Header = React.memo(({title}) => { // destructuring de props.title
+    
     return ( 
         <Row>
             <Col>
@@ -8,6 +11,6 @@ const Header = ({title}) => { // destructuring de props.title
             </Col>
       </Row>
      );
-}
+});
  
 export default Header;
